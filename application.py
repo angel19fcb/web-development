@@ -3,4 +3,15 @@ application = Flask(__name__)
 
 @application.route('/')
 def hello_world():
-    return "Hello World! How are you!!!!!!!"
+
+@application.route("/")
+def index():
+    return "Your Flask App Works!"
+
+@application.route("/hello")
+def hello():
+    return "Hello World!"
+
+
+if __name__ == "__main__":
+    application.run(port=5000, debug=True)
